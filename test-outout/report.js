@@ -1,132 +1,82 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("/Users/addauser/IdeaProjects/cucumberdemo/src/main/java/Feature/loginPage.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("/Users/addauser/IdeaProjects/cucumberdemo/src/main/java/Feature/createpost.feature");
 formatter.feature({
   "line": 1,
-  "name": "OrangeHrm Login Page",
+  "name": "Conversation",
   "description": "",
-  "id": "orangehrm-login-page",
+  "id": "conversation",
   "keyword": "Feature"
 });
-formatter.scenarioOutline({
-  "line": 3,
-  "name": "Check user able to login",
+formatter.scenario({
+  "line": 2,
+  "name": "User login to ADDA and post conversation",
   "description": "",
-  "id": "orangehrm-login-page;check-user-able-to-login",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline"
+  "id": "conversation;user-login-to-adda-and-post-conversation",
+  "type": "scenario",
+  "keyword": "Scenario"
 });
 formatter.step({
-  "line": 5,
-  "name": "user is on OrangeHrm Login Page",
+  "line": 3,
+  "name": "User is on ADDA Resident page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 6,
-  "name": "page title is OrangeHrm",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 7,
-  "name": "user enters \"\u003cusername\u003e\" and \"\u003cpassword\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 8,
-  "name": "user clicks on login button",
-  "keyword": "Then "
-});
-formatter.examples({
-  "line": 9,
-  "name": "",
-  "description": "",
-  "id": "orangehrm-login-page;check-user-able-to-login;",
+  "comments": [
+    {
+      "line": 4,
+      "value": "#    When  User click on fab icon to select conversation"
+    }
+  ],
+  "line": 5,
+  "name": "User enter title and description",
   "rows": [
     {
       "cells": [
-        "username",
-        "password"
+        "title",
+        "description"
       ],
-      "line": 10,
-      "id": "orangehrm-login-page;check-user-able-to-login;;1"
+      "line": 6
     },
     {
       "cells": [
-        "admin",
-        "admin123"
+        "TestPost204",
+        "Testdescription204"
       ],
-      "line": 11,
-      "id": "orangehrm-login-page;check-user-able-to-login;;2"
+      "line": 7
+    },
+    {
+      "cells": [
+        "TestPost514",
+        "Testdescription514"
+      ],
+      "line": 8
     }
   ],
-  "keyword": "Examples"
-});
-formatter.scenario({
-  "line": 11,
-  "name": "Check user able to login",
-  "description": "",
-  "id": "orangehrm-login-page;check-user-able-to-login;;2",
-  "type": "scenario",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 5,
-  "name": "user is on OrangeHrm Login Page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "page title is OrangeHrm",
   "keyword": "When "
 });
 formatter.step({
-  "line": 7,
-  "name": "user enters \"admin\" and \"admin123\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 8,
-  "name": "user clicks on login button",
+  "line": 9,
+  "name": "close the Browser",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "loginstepdef.user_is_on_OrangeHrm_Login_Page()"
+  "location": "conversationpost.User_is_on_ADDA_Resident_page()"
 });
 formatter.result({
-  "duration": 26092351755,
+  "duration": 23356952213,
   "status": "passed"
 });
 formatter.match({
-  "location": "loginstepdef.page_title_is_OrangeHrm()"
+  "location": "conversationpost.user_enter_title_and_description(DataTable)"
 });
 formatter.result({
-  "duration": 33381449,
+  "duration": 27845166891,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "admin",
-      "offset": 13
-    },
-    {
-      "val": "admin123",
-      "offset": 25
-    }
-  ],
-  "location": "loginstepdef.user_enters_username_and_password(String,String)"
+  "location": "conversationpost.close_the_Browser()"
 });
 formatter.result({
-  "duration": 320354103,
-  "status": "passed"
-});
-formatter.match({
-  "location": "loginstepdef.user_clicks_on_login_button()"
-});
-formatter.result({
-  "duration": 1012229024,
+  "duration": 282901220,
   "status": "passed"
 });
 });
